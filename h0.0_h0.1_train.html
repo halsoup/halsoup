@@ -1,0 +1,820 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Table</title>
+    <style>
+        table {{
+            width: 100%;
+            border-collapse: collapse;
+        }}
+        th, td {{
+            border: 1px solid #ddd;
+            padding: 8px;
+        }}
+        th {{
+            background-color: #f2f2f2;
+        }}
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Question</th>
+            <th>Chosen</th>
+            <th>Rejected</th>
+        </tr>
+
+    <tr>
+        <td><img src="data/coco/train2017/000000463732.jpg" style="max-width: 336px;"></td>
+        <td>Can you describe the main features of this image for me?</td>
+        <td>The image features a man and a little girl standing in the snow at a ski resort. Both of them have skis on and are ready to ski, as they appear to be dressed and equipped for the activity. The young girl is in the man's arms, being held near the chest level to look into his camera.
+
+Other people can be seen scattered around the scene, likely enjoying the ski resort as well. There's another pair of skis positioned on the right side of the image, and a sled is visible closer to the foreground on the left side. The snowy landscape is complemented by beautiful mountains in the background.</td>
+        <td>On a sunny day, a man and a baby are enjoying themselves atop a snowy mountain, near the ski slope. The man is holding the baby securely while donning skis for their ride down the slope. 
+
+There are two snowboards nearby, encouraging this family-friendly outdoor activity. Several other people can be seen around the area, undoubtedly engaging in their own winter sports activities. Some people are standing closer to the slope, possibly preparing or adjusting their equipment.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000231714.jpg" style="max-width: 336px;"></td>
+        <td>What suggestion can you provide to the man based on the current situation at the restaurant?</td>
+        <td>Given that the man is sitting at a table in a restaurant with a cold drink in front of him and there is a pizza near him, my suggestion would be for him to enjoy the meal and savor the combination of the pizza and cold drink. This pairing of food and beverage can create a satisfying dining experience. Additionally, he might want to choose cutlery such as a knife and a fork, which is available on the table, to enjoy his meal more comfortably, if the pizza requires cutting or handling. Finally, it would be a good idea to appreciate the atmosphere and socialize with other people in the restaurant, creating a pleasant dining ambiance.</td>
+        <td>Based on the image, I would suggest the man to eventually focus on the food and enjoy his meal at the restaurant. While pizza is visible on the table, it appears that he is holding a cup of soda, implying that he might be drinking still before eating. Since the other items and focus on the cup might distract the man from the main meal, I recommend putting aside the soda momentarily and starting to eat the pizza. This will allow him to fully indulge in the taste and texture of the pizza and enhance his overall dining experience.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000063571.jpg" style="max-width: 336px;"></td>
+        <td>What are the main electronic devices on the desk?</td>
+        <td>The main electronic devices on the desk are a laptop, monitor, speakers, and hard drive.</td>
+        <td>The main electronic devices on the desk include a laptop, computer screen, and various items associated with a computer setup. The desk is messy, with many tools spread out during a repair or upgrade session.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000370523.jpg" style="max-width: 336px;"></td>
+        <td>What kind of skill does the man likely possess to perform this activity?</td>
+        <td>The man riding the skateboard in the black and white photograph likely possesses a certain level of skill and experience in skateboarding. To perform this activity, he must have good balance, coordination, and spatial awareness. Additionally, he would have developed skills such as effectively handling turns, speed control, and proper body posture to maintain stability while skateboarding. These skills are typically developed through consistent practice and a desire to improve in the sport, making it likely that the man in the image has dedicated time and effort to honing his skateboarding abilities.</td>
+        <td>The man riding the skateboard on the brick floor likely possesses a combination of skills such as balance, coordination, and control. To perform this activity, the skateboarder must be able to maintain his balance on the skateboard, control the skateboard's movement efficiently, and coordinate his body movements with the skateboard's motion. These skills are acquired through practice, agility, and repeated trial-and-error attempts. The brick surface adds an additional challenge to skating, as it provides a rough and unpredictable ride, which may require the skateboarder to have more experience and confidence to perform the activity safely and effectively.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/048623908X.jpg" style="max-width: 336px;"></td>
+        <td>Who is the author of this book?
+Answer the question using a single word or phrase.</td>
+        <td>Kristin Helberg</td>
+        <td>Abraham Dils</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000125117.jpg" style="max-width: 336px;"></td>
+        <td>What is the red and blue object in the photo used for?
+Answer the question using a single word or phrase.</td>
+        <td>Fire hydrant</td>
+        <td>Put out fires</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/844257796.jpg" style="max-width: 336px;"></td>
+        <td>Who wrote this book?
+Answer the question using a single word or phrase.</td>
+        <td>Richard Spencer</td>
+        <td>Newhart</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/gqa/images/2360548.jpg" style="max-width: 336px;"></td>
+        <td>Are the people the same gender?
+Answer the question using a single word or phrase.</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/2337439.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.44, 0.45, 0.49, 0.49].</td>
+        <td>A small piece of melted cheese on the pizza pie.</td>
+        <td>A piece of cheese on top of a piece of the slice.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/2369934.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: the sky is blue in color.</td>
+        <td>[0.5, 0.13, 0.68, 0.19]</td>
+        <td>[0.39, 0.17, 0.68, 0.24]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/gqa/images/2379858.jpg" style="max-width: 336px;"></td>
+        <td>What is the color of the umbrella in the top?
+Answer the question using a single word or phrase.</td>
+        <td>Black</td>
+        <td>White</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000206039.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: batter.</td>
+        <td>[0.51, 0.26, 0.88, 0.77]</td>
+        <td>[0.53, 0.25, 0.89, 0.76]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/gqa/images/2316318.jpg" style="max-width: 336px;"></td>
+        <td>What's the grass in front of?
+Answer the question using a single word or phrase.</td>
+        <td>Bushes</td>
+        <td>Bush</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/2349773.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.0, 0.21, 0.21, 0.32].</td>
+        <td>Large white sign on a fence.</td>
+        <td>A large white billboard.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000218114.jpg" style="max-width: 336px;"></td>
+        <td>What animals are in the bed with the woman?</td>
+        <td>A cat and a dog are in the bed with the woman.</td>
+        <td>In the bed, there are two dogs and a cat with the woman.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000438333.jpg" style="max-width: 336px;"></td>
+        <td>What color are the bags?
+Answer the question using a single word or phrase.</td>
+        <td>Black</td>
+        <td>Brown</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/2361950.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: part of a metal.</td>
+        <td>[0.17, 0.59, 0.2, 0.64]</td>
+        <td>[0.49, 0.81, 0.54, 0.85]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000430790.jpg" style="max-width: 336px;"></td>
+        <td>If a friend were to join this group of bikers, what would they need to be prepared for?</td>
+        <td>If a friend were to join the group of bikers riding on the highway, they should be prepared for the group's moderate speed, which may be around 60-70 miles per hour. They should have proper motorcycle riding gear and clothing, such as a helmet, gloves, a riding jacket, pants, and boots, to ensure safety and comfort during the ride. Additionally, the friend should be familiar with the area and the traffic rules, have good bike maintenance, and be mindful of the surroundings and weather conditions. It's also crucial that they communicate with the group and maintain a safe following distance to avoid any accidents or traffic disruptions during the ride.</td>
+        <td>If a friend were to join this group of bikers, they would need to be prepared with their own motorcycle that meets safety standards and is well-maintained. They should wear appropriate gear for riding, including a helmet, gloves, protective clothing (such as a jacket and pants), and sturdy footwear. Moreover, they should have the necessary permits for operating a motorcycle legally. Additionally, being aware of traffic rules, being respectful of other road users, and maintaining a safe riding speed are essential to ensuring a pleasant and safe experience while riding with the group. It would be best to participate in group activities that involve mutual respect, cooperation and prioritizing everyone's safety.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000100448.jpg" style="max-width: 336px;"></td>
+        <td>What do you see happening in this image?</td>
+        <td>The image depicts a tennis court where multiple people are actively participating in tennis games. There are at least 5 people visible across the court, likely in different stages of their game. One person is intently watching a tennis ball, either preparing to return a shot or waiting for it to land. In addition to team matches, there are leagues that they might participate in.
+
+Two tennis rackets can be identified in the scene; one is positioned on the left side and appears to be resting on the court. The second racket is located near the right side of the court, held by a person who might be about to return a shot. The scene captures various positions and movements of the players, reflecting the dynamic nature of the sport.</td>
+        <td>The image shows a tennis court with multiple people engaged in the sport. A young boy is playing tennis, swinging a tennis racket toward a sports ball, which is positioned mid-air near him. There are several other individuals in the background, some of them also holding rackets, so they might also be players or engaged in the practice session.
+
+The court takes up a significant portion of the scene, emphasizing the size and importance of the playing area. The gathering of people indicates that this could be a warm-up or a social event involving the sport.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/textvqa/train_images/76d6d96097a60b11.jpg" style="max-width: 336px;"></td>
+        <td>Provide a one-sentence caption for the provided image.
+Reference OCR token: Ieteve, TAG!, You're, It, 1ND, to, tags</td>
+        <td>A Steve jobs advertisement displays the slogan TAG! You're It!.</td>
+        <td>A powerpoint board shows just a few images and one that reads "You're it".</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/2343190.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: Flowers are at the bottom of dress.</td>
+        <td>[0.34, 0.82, 0.64, 1.0]</td>
+        <td>[0.51, 0.82, 0.65, 0.9]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/gqa/images/2351337.jpg" style="max-width: 336px;"></td>
+        <td>On which side of the image are the trucks?
+Answer the question using a single word or phrase.</td>
+        <td>Right</td>
+        <td>Left</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/1469624966.jpg" style="max-width: 336px;"></td>
+        <td>Who wrote this book?
+Answer the question using a single word or phrase.</td>
+        <td>Julie M. Weise</td>
+        <td>Julie M. Woodse</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000210791.jpg" style="max-width: 336px;"></td>
+        <td>Can you describe the main features of this image for me?</td>
+        <td>The image shows a young boy in a baseball uniform, wearing a helmet and holding a baseball bat, standing at home plate on a field during a game. He is eagerly waiting for the ball. Surrounding him are several other people in various positions on and off the field, which contribute to the scene's dynamic atmosphere. Some of the individuals could be his teammates or opponents, adding to the excitement of the game.</td>
+        <td>The image features a young boy standing next to home plate on a baseball field, holding a baseball bat and wearing a helmet. A young man stands on the first base, also holding a baseball bat nearby, possibly waiting for a turn to hit. There are two benches in the background, likely for spectators or players when not in action.
+
+In addition to the main players, a few other individuals can be seen scattered around the field, likely taking part in the game or providing support. Overall, the scene captures an exciting moment during a youth baseball game, with everyone involved showing enthusiasm and dedication to the sport.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000458139.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.74, 0.4, 0.9, 0.8].</td>
+        <td>A container of karo syrup.</td>
+        <td>Dairy rochon flat.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/textvqa/train_images/5006f100cdb2c702.jpg" style="max-width: 336px;"></td>
+        <td>Provide a one-sentence caption for the provided image.
+Reference OCR token: A, R213</td>
+        <td>the tail of a plane states RF213 is on the ground.</td>
+        <td>A propeller is labelled P209J, and sticks out of a grey plane.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000414885.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: child with water shoes standing on top of scooby doo boogy board.</td>
+        <td>[0.48, 0.28, 0.71, 0.5]</td>
+        <td>[0.45, 0.28, 0.68, 0.85]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000175479.jpg" style="max-width: 336px;"></td>
+        <td>What do you see happening in this image?</td>
+        <td>The image shows a bird, likely a spotted pigeon, standing on top of a round white dining table surrounded by chairs. The table is covered with a white tablecloth, which covers the entirety of the table.
+
+The setting appears to be an outdoor dining space, as there are a few more dining tables in the background, with chairs positioned around them. Additionally, there are numerous cars and other vehicles parked in the distance and around the edges of the scene.</td>
+        <td>The image features an outdoor dining area with a small pigeon perched at the center of a white dining table, surrounded by chairs. The bird is calmly standing on top of the white tablecloth-covered table, possibly looking for food or simply resting. Nearby, other tables and chairs can be seen arranged, as well as some potted plants that add a touch of greenery to the scene.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K_2/2401903.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.18, 0.23, 0.3, 0.35].</td>
+        <td>The leaves are green.</td>
+        <td>Green leaves on brown branches.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000145116.jpg" style="max-width: 336px;"></td>
+        <td>What would be the advantage of traveling this way?
+Answer the question using a single word or phrase.</td>
+        <td>Scenic</td>
+        <td>Railroad</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/713523.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: the parked car.</td>
+        <td>[0.85, 0.59, 0.92, 0.61]</td>
+        <td>[0.92, 0.57, 1.0, 0.63]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000386016.jpg" style="max-width: 336px;"></td>
+        <td>Why might a train engine be pushing another engine?</td>
+        <td>A train engine may be pushing another engine in order to assist with pulling a heavier load or maintaining optimal speed, especially while going uphill. By pushing or leading the second engine, the first engine can help distribute the force more evenly, ensuring that both engines work together efficiently and can better handle the additional weight or resistance from external factors like terrain changes. This arrangement is not uncommon in railway systems to optimize the overall performance and to ensure safety during the journey.</td>
+        <td>In some cases, a train engine may be pushing another engine due to a train pushing by maneuver or a staged face-off maneuver. This is typically executed for operational, maintenance, or crew-training purposes. In the image, it appears that an engine is pushing another engine like this. For example, train companies may use this technique to perform subtle functional tests or display features, update firmware, or perform essential maintenance tasks that can only be carried out while the train is underway. Additionally, such synchronized maneuvers can be used to teach and hone the skills of train operation personnel by allowing them to practice together and create stronger teamwork.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/2331412.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.28, 0.33, 0.6, 0.64].</td>
+        <td>A man wearing a suit coat.</td>
+        <td>A man with glasses on.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000492466.jpg" style="max-width: 336px;"></td>
+        <td>What might a spectator learn by observing the baseball player's performance?</td>
+        <td>By observing the baseball player's performance, a spectator might learn about the player's batting technique, skill level, and hand-eye coordination. They can potentially identify the player's strengths and weaknesses, which might be useful for understanding the player's style of play and approach during the game. Additionally, the spectator can experience the thrill of witnessing a powerful bat swing or a skillful hit and appreciate the level of athleticism and determination exhibited by the baseball player. Observing the performance also offers an opportunity to appreciate and understand the complex dynamics and strategies of the game of baseball.</td>
+        <td>By observing the baseball player's performance during the game, a spectator might learn about the player's skill level, technique, and physical abilities. They can watch how well the player positions himself, their stance, and their swing, which could provide insights into the player's experience and strengths in the sport. Additionally, by observing the game dynamics, such as coordination between the baseball player and the other players, spectators can gain an understanding of teamwork and strategy. Finally, they might perceive how well the players adapt their techniques in response to their strengths and the strengths of their teammates or opponents, highlighting the importance of adaptability and resilience in sports. Overall, observing a baseball player's performance can provide valuable insights into the intricacies and nuances of the sport.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000496516.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: right computer screen.</td>
+        <td>[0.63, 0.1, 1.0, 0.46]</td>
+        <td>[0.65, 0.14, 1.0, 0.46]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K_2/4771.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: A wall on the side of a building.</td>
+        <td>[0.36, 0.44, 0.45, 0.56]</td>
+        <td>[0.36, 0.5, 0.45, 0.61]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/500516294.jpg" style="max-width: 336px;"></td>
+        <td>Who is the author of this book?
+Answer the question using a single word or phrase.</td>
+        <td>Olivier Dupon</td>
+        <td>Olivier Sarpé-Dupon</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/gqa/images/2329378.jpg" style="max-width: 336px;"></td>
+        <td>What kind of place is shown?
+Answer the question using a single word or phrase.</td>
+        <td>Lawn</td>
+        <td>Park</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000123555.jpg" style="max-width: 336px;"></td>
+        <td>What does the sign beside the green light forbid?
+A. u-turns
+B. going straight
+C. left turns
+D. right turns
+Answer with the option's letter from the given choices directly.</td>
+        <td>D</td>
+        <td>C</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K_2/2416615.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.49, 0.57, 0.54, 0.61].</td>
+        <td>Door mounted on the plane.</td>
+        <td>Large jetliner in flight used by a commercial airline.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/textvqa/train_images/87b53b13727ed497.jpg" style="max-width: 336px;"></td>
+        <td>Provide a one-sentence caption for the provided image.
+Reference OCR token: ver, star, com.</td>
+        <td>A fleet of three Jet airplanes are parked on a runway.</td>
+        <td>Airplanes at an airport including two Cathay Pacific Star Alliance planes.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000201419.jpg" style="max-width: 336px;"></td>
+        <td>What are the main ingredients of the sandwich?</td>
+        <td>The main ingredients of the sandwich are a sausage and a cheese on a bun.</td>
+        <td>The main ingredients of the sandwich in the image are meat, cheese, tomato, and onion.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/gqa/images/2354953.jpg" style="max-width: 336px;"></td>
+        <td>Which device is open, the cell phone screen or the mobile phone?
+Answer the question using a single word or phrase.</td>
+        <td>Screen</td>
+        <td>Cell phone screen</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/823433080.jpg" style="max-width: 336px;"></td>
+        <td>Who wrote this book?
+Answer the question using a single word or phrase.</td>
+        <td>Loreen Leedy</td>
+        <td>Lorelei Leedy</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/1401837336.jpg" style="max-width: 336px;"></td>
+        <td>Who wrote this book?
+Answer the question using a single word or phrase.</td>
+        <td>Ellen Dietz-Bourguignon</td>
+        <td>Ellen Dietz-Bourguignon MS  RDA  RBM  RDH  RD</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/textvqa/train_images/95259d687d440013.jpg" style="max-width: 336px;"></td>
+        <td>Provide a one-sentence caption for the provided image.
+Reference OCR token: wins</td>
+        <td>A picture of a shirt with the words Twinsus on it.</td>
+        <td>A sports jersey displaying an old "Twins" team logo.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/textvqa/train_images/8f912cd922b3e107.jpg" style="max-width: 336px;"></td>
+        <td>Provide a one-sentence caption for the provided image.
+Reference OCR token: 5907>e>, RAJA, FASHIONS, RAJA, FA, FASHIONS, HIONS, BESPOKE, TAILORS</td>
+        <td>Two vehicles are driving down the street under a neon sign that say "Raja Fashions".</td>
+        <td>The image of a busy street at night shows a lit up sign for Raja Fashions.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/2350382.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.61, 0.28, 0.94, 0.66].</td>
+        <td>A man on a red motorcycle with a helmet and all black clothing riding on the road.</td>
+        <td>A man on a motorcycl.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000359762.jpg" style="max-width: 336px;"></td>
+        <td>What can you infer about the individual using the cutting board based on the image?</td>
+        <td>Based on the image, one can infer that the individual using the cutting board is in the process of preparing a meal. This can be deduced from the presence of multiple mushroom pieces on the cutting board alongside a knife and an onion. This could suggest that the individual is in the process of chopping the mushrooms and preparing them for a dish or dessert. The use of a knife on the cutting board implies that the person might be chopping the vegetables and fruits for further cooking or incorporating them into a recipe.</td>
+        <td>Based on the image, the individual is likely in the process of preparing a meal that involves chopping various ingredients, such as mushrooms and onions, on the cutting board. The presence of the knife indicates that they have been actively cutting and slicing the food items for cooking. This suggests that the person might be skilled in handling kitchen tools and familiar with the process of chopping ingredients. The use of a chef's knife and the cutting board also implies that the individual values safety and proper meal preparation practices. The overall scene depicts someone who likely enjoys cooking and preparing meals for themselves or others.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000568808.jpg" style="max-width: 336px;"></td>
+        <td>What unique aspect of the property might be appealing to a visitor?</td>
+        <td>A unique aspect of the property that could be appealing to a visitor is its beachside location, rising up from the water like a tall house or hotel. In the image, there are four boats near another smaller structure in the water, further enhancing the tropical and serene atmosphere of the setting. Visitors may appreciate the beautiful architecture and overall ambiance of the home, along with the opportunity to enjoy access to the beach or engage in boating or nautical activities. The sunny weather also adds to the appeal, making it an inviting place for relaxation, leisure, or even photo opportunities.</td>
+        <td>A unique aspect of the property that might be appealing to a visitor is the two-story house situated on a small island in the ocean. The island setting offers a sense of isolation and tranquility, allowing the householder to enjoy a completely unconnected and secluded living environment separated from the mainland. The presence of boats nearby indicates that the property can be accessed for recreational purposes or maintenance tasks, and the surrounding body of water, blue lagoon, and possible private dock contribute to an overall serene and exclusive atmosphere.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K_2/2384741.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: a pug.</td>
+        <td>[0.25, 0.31, 0.35, 0.44]</td>
+        <td>[0.13, 0.4, 0.35, 0.69]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000151403.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.65, 0.33, 1.0, 0.85].</td>
+        <td>The couch the man leaning on is on it is an antiqued sofa with a floral pattern.</td>
+        <td>The wingbacked patterned sofa the men are sitting on.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000340983.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.66, 0.37, 0.94, 0.82].</td>
+        <td>Woman on the right.</td>
+        <td>Older.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/textvqa/train_images/1bc1c18bb1a91871.jpg" style="max-width: 336px;"></td>
+        <td>Provide a one-sentence caption for the provided image.
+Reference OCR token: IMPERIO, ROMANO, ORO, ASTURES, Arqueologia, IMPERIO, ROMANO, IMPERIO, ROMANO, Y, EL, ORO, LOS, ASTURES, EL, IMPERIO, ROMANO, ORO, DE, LOS, ASTURES, ORO, DE, LOS, ASTURES, FlorencioGuncdaMendez, OCASION, cajAstur, PRECIO:, 90, EUROS, cajAstur, Jesus, Casaus, LOMBARDIA, HLUGO, CONTEL</td>
+        <td>A case of literature is on display for two different prices.</td>
+        <td>A sign announces that something is for sale for 90 euros.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K_2/2417376.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.8, 0.81, 0.92, 0.91].</td>
+        <td>A pair of blue jeans.</td>
+        <td>The man is wearing blue jeans.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000050691.jpg" style="max-width: 336px;"></td>
+        <td>Is this Serena Williams?
+Answer the question using a single word or phrase.</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/761500693.jpg" style="max-width: 336px;"></td>
+        <td>Who is the author of this book?
+Answer the question using a single word or phrase.</td>
+        <td>Chet Williamson</td>
+        <td>Norm & Jez Blues emerge from the left field</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000397486.jpg" style="max-width: 336px;"></td>
+        <td>What should one consider while using the knife in this image?</td>
+        <td>When using the large chef's knife in this image, one should consider several factors, such as safety, accuracy, and efficient cutting techniques. To ensure safety, it's essential to use a stable cutting surface like the chopping board the knife is placed on. A firm grip on the handle, keeping fingers away from the blade, and using a proper cutting technique, like the claw grip, can also help prevent accidents and injuries. The individual should also pay attention to the knife's sharpness, as a well-sharpened knife is more precise and much safer to use than a dull one. Moreover, the user should consider proper knife care, such as cleaning and sharpening regularly, to maintain its functionality and longevity. Lastly, it's crucial to avoid using the knife for other tasks besides its intended purpose to prolong its life and ensure the optimal performance.</td>
+        <td>When using the large, black knife on the wooden cutting board in the image, one should consider a few factors for safety and effectiveness. Firstly, it is essential to hold the knife securely and use proper cutting techniques, as improper handling may lead to accidents or injuries. Handling the knife with both hands with the index finger pinching the blade close to the cutting board is recommended for stable cutting.
+
+Additionally, using the cutting board correctly is important. It should be a stable and slip-resistant surface to prevent the knife from slipping during cutting, and it should be stable on the table or counter. Ensuring that the cutting board is the right size and capacity for the knife also helps in providing a better cutting experience and minimizing the risk of damage to the work surface.
+
+Lastly, it is important to maintain the sharpness of the knife regularly, as a well-maintained knife is safer and more efficient to use in the kitchen.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000227678.jpg" style="max-width: 336px;"></td>
+        <td>What type of natural indoor display and decoration is this, and what effect could it potentially have on mood or atmosphere?</td>
+        <td>The image depicts a vase filled with fresh flowers such as yellow, purple, and blue, used as a natural indoor display and decoration. Place in the room, the brightly colored flowers create a visually pleasing scene and potentially have a positive effect on the mood and atmosphere. Flowers have been known to bring natural beauty, life, and positivity to a space, which can uplift the ambiance and even promote an overall sense of well-being. In addition, the vibrant colors from the flowers can evoke feelings of happiness, vitality, and energy, further enriching the indoor setting.</td>
+        <td>This image depicts a transparent glass bowl or vase containing a long-stemmed arrangement of brightly colored yellow and pink flowers, green foliage, and smaller blooms. The composition and colors of the floral arrangement evoke a sense of fresh, vibrant, and inviting natural beauty. This type of indoor display and decoration is known as a floral arrangement or flower centerpiece. Such an arrangement can potentially brighten up a space and create a positive ambiance, uplifting mood, and enhancing the overall atmosphere. The presence of bright colors can evoke feelings of happiness, optimism, and positivity, making the room feel more welcoming and pleasant. It can also serve as a visual focal point, adding warmth and artistic value to the interior.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000324981.jpg" style="max-width: 336px;"></td>
+        <td>What do you think is going on in this snapshot?</td>
+        <td>In the image, a man and his two dogs are standing outside a horse trailer. On the left side, there is a brown and white dog as well as a larger, tan dog nearby. Both dogs appears to be following their owner, who is walking with a bucket of horse food and holding a bag.
+
+The environment and background of the picture suggest a farm or rural setting. There is a truck parked in one half of the scene, and another truck further back in the frame. Additionally, there's a person standing slightly to the right of the man with the dogs and the horse trailer.</td>
+        <td>The image features a man standing in a field, holding a bag, possibly a bag of grain or horse feed. There are two dogs in the scene, one a brown dog near the center of the image and the other a black dog closer to the right side of the field. The man seems to be interacting with the dogs while also handling the bag.
+
+Three horses can be seen in the vicinity. One horse is located on the left side of the scene, another horse is in the middle, and the third horse can be spotted on the right side of the image. In addition to the horses and dogs, there is a truck parked towards the right margin of the image, occupying a significant portion of the background.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000101761.jpg" style="max-width: 336px;"></td>
+        <td>How many faucets are there?
+Answer the question using a single word or phrase.</td>
+        <td>2</td>
+        <td>1</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/gqa/images/2395454.jpg" style="max-width: 336px;"></td>
+        <td>Are the green trees leafless or bushy?
+Answer the question using a single word or phrase.</td>
+        <td>Bushy</td>
+        <td>Leafless</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000212440.jpg" style="max-width: 336px;"></td>
+        <td>What makes this pizza unique, and what considerations should one take when eating it?</td>
+        <td>This pizza is unique because it features olives, extra cheese, sausage, and anchovies as toppings. As a table of three slices on a metal baking tray shows different parts, it appears to be a gourmet pizza or a pizza with diverse ingredients. When eating this pizza, one should consider the different topping combinations and the potential balance between taste and nutritional intake. Olives provide a salty and oily taste to the pizza, while extra cheese can add a rich, savory flavor to the pizza. Sausage provides a smoky and hearty element, while anchovies contribute an umami, salty flavor. People with specific taste preferences, allergies, or dietary requirements may need to weigh their choices when consuming this pizza to enjoy the unique combination of ingredients without any undesirable consequences.</td>
+        <td>The uniqueness of this pizza lies in the combination of ingredients, including olives and cheese, which is served in a circular, style popular in some regions. When eating this pizza, one should consider its triangular and circular toppings when picking up a slice. The differences in shape and size might make it a bit challenging to eat neatly without making a mess, but with a small plate or napkin, one will be able to enjoy the delicious meal without any hassle. The distinctive presentation and taste of the pizza with olives and cheese make it a fun dining experience with its flatbread crust and unique topping arrangement.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/62411217.jpg" style="max-width: 336px;"></td>
+        <td>Who is the author of this book?
+Answer the question using a single word or phrase.</td>
+        <td>Maria del Mar Sacasa</td>
+        <td>Maria Jimenez Sa Casa</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/gqa/images/2385623.jpg" style="max-width: 336px;"></td>
+        <td>What color do the clouds have?
+Answer the question using a single word or phrase.</td>
+        <td>Dark</td>
+        <td>White</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000036034.jpg" style="max-width: 336px;"></td>
+        <td>What's happening in the scene?</td>
+        <td>The image displays a wooden dining table with two plates, each holding a delectable donut. One of these donuts appears to be a glazed donut, while the other one is a chocolate donut. A white cup is also present on the table, likely containing a beverage to complement the sweet treat. 
+
+Several decorative elements complement the dining setup. A hanging vase is found at the top of the table, adding an elegant touch. A bench extends along one side of the table, providing seating for those who will partake in this delightful snack. A chair is positioned nearby, completing the set-up and inviting someone to join while they unwind and enjoy the delightful combination of donuts and a drink.</td>
+        <td>The image showcases a dining table filled with various kinds of doughnuts and a cup. There are three different doughnuts on the table, each one located in the center, top, and bottom left corner. In addition to the doughnuts, there are two sandwiches on the plate, one positioned horizontally across the center of the table and the other one running from the right to the middle part of the table. Moreover, a cup is situated in the upper right portion of the table.
+
+A person can be seen sitting in the background, positioned above the top left corner of the table. Another dining table is visible in the upper left corner of the scene, taking up a significant portion of the entire image.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/1483804887.jpg" style="max-width: 336px;"></td>
+        <td>What is the title of this book?
+Answer the question using a single word or phrase.</td>
+        <td>Common Core Differentiated Reading for Comprehension: Grade 3 CCSS ALLEGIANCE, FREEDOM, JUSTICE, RESPONSIBILITY (Common Core 36 Weeks of Learning)</td>
+        <td>Diss Me: The Teensy Weensy Trilogy of Horror for Humanity</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000377778.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.49, 0.45, 0.86, 0.86].</td>
+        <td>The big guy on the road.</td>
+        <td>Big black truck.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000221470.jpg" style="max-width: 336px;"></td>
+        <td>Is there a crowd watching the baseball game in the image?</td>
+        <td>Yes, there is a crowd watching the baseball game in the image.</td>
+        <td>Yes, there is a large group of people watching the baseball game in the image. The fans are sitting in chairs and cheering on the players as they participate in the game.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/textvqa/train_images/1a99e56ab9a74709.jpg" style="max-width: 336px;"></td>
+        <td>Provide a one-sentence caption for the provided image.
+Reference OCR token: A, "W, "What, am, I, putting, on, you?", WH, WHAT, AT, IS, MY, SIGNAL, STRENGTH?, GIVE, ME, A, METER, READING, 1976, AGMUELLER, V</td>
+        <td>A card has a meter and text underneath that says "What is my signal strength.</td>
+        <td>A royal flush looks looks like a lot of work compared to the Meter Reading card.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/2326361.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.69, 0.23, 0.94, 0.68].</td>
+        <td>Chest of drawers in bedroom.</td>
+        <td>Huge wooden closet , with 4 drawers.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000094010.jpg" style="max-width: 336px;"></td>
+        <td>What is the person doing in the image?</td>
+        <td>The person, a woman or girl, is sitting on a bed with her knee lifted and wearing black tights.</td>
+        <td>The person in the image is sitting on a bed, dressed in all black.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/1580372155.jpg" style="max-width: 336px;"></td>
+        <td>Who wrote this book?
+Answer the question using a single word or phrase.</td>
+        <td>Kristyna Barden</td>
+        <td>Cindy Bjorken</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/1423171101.jpg" style="max-width: 336px;"></td>
+        <td>Who wrote this book?
+Answer the question using a single word or phrase.</td>
+        <td>Sudipa Bardhan-Quallen</td>
+        <td>Sudipta Bardhan-Quallen</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000402362.jpg" style="max-width: 336px;"></td>
+        <td>What color is the horse in the image?</td>
+        <td>The horse in the image is black and white.</td>
+        <td>The horse in the image is white and black.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000358517.jpg" style="max-width: 336px;"></td>
+        <td>What might be a reason for the woman carrying the large teddy bear in this public setting?</td>
+        <td>There could be several reasons for the woman to carry a large teddy bear through a shopping mall or an airport terminal. She might have just purchased the bear as a gift for someone and is transporting it to the destination for presentation. Another possibility is that the teddy bear could be an attraent or promotional item from a store she works at or a display she wants to present the overall design of the setting. Furthermore, she could simply be a creative or unique person who likes to showcase her style by carrying oversized objects like the giant teddy bear. It could also serve as a conversation starter, drawing attention and sparking conversations among strangers.</td>
+        <td>There could be several reasons for the woman carrying the large teddy bear in a public setting. One possibility is that she has just received or purchased the teddy bear as a gift for someone and is lifting it enthusiastically to show off its size. Alternatively, she might have just won the teddy bear by playing a game or attempting a challenge at a local amusement park or fair, and she is carrying it as a result of her success. Lastly, it could be part of a promotional event, performance, or advertisement where the giant teddy bear serves as an eye-catching prop to attract attention and increase interest in a particular product or cause.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000165160.jpg" style="max-width: 336px;"></td>
+        <td>What color is the traffic light in the image?</td>
+        <td>The traffic light in the image is showing red.</td>
+        <td>The traffic light in the image is red.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000388805.jpg" style="max-width: 336px;"></td>
+        <td>What color is the flower?
+Answer the question using a single word or phrase.</td>
+        <td>Pink</td>
+        <td>Red</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K_2/2383977.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: bottom of a bag.</td>
+        <td>[0.47, 0.69, 0.71, 0.8]</td>
+        <td>[0.46, 0.66, 0.6, 0.77]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/textvqa/train_images/431c9a0556e0133f.jpg" style="max-width: 336px;"></td>
+        <td>Provide a one-sentence caption for the provided image.
+Reference OCR token: SUCN, 40a, LINH, THU, DOI, XUA, LNHDHU, DOiXUA, LE, SOLDAT, D'AUTREFOIS, VIET, ONGAH0, RAMinA, VIET-NAM, CONG-HDA, 14, 8.72, TETNANCONGRO, NGAY, @AUTIE, 30d, SAIGON, HEHE, THU, DOI, 14.8.7, Premier, Jour, d'Emission, NGAY, DAUTIEN, 14, 1979, FIRST, DAY, OF, ISSUE, SAIGON</td>
+        <td>Postcard with 14, 8. 72 on the front and other stamps.</td>
+        <td>A postage envelope with a postmark from Saigon dated January 16, 1979.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000094676.jpg" style="max-width: 336px;"></td>
+        <td>What color are the words on the plane?
+Answer the question using a single word or phrase.</td>
+        <td>Black</td>
+        <td>Silver</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/2339447.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: this is a watch.</td>
+        <td>[0.49, 0.32, 0.51, 0.36]</td>
+        <td>[0.49, 0.63, 0.53, 0.71]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/1780050585.jpg" style="max-width: 336px;"></td>
+        <td>Who wrote this book?
+Answer the question using a single word or phrase.</td>
+        <td>*</td>
+        <td>Insight Guides</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000216794.jpg" style="max-width: 336px;"></td>
+        <td>What objects are visible in the park area in the image?</td>
+        <td>In the park area, there are a gazebo, benches, and greenery surrounding walkways. The image also features trees and mountains in the background.</td>
+        <td>In the park area, a variety of objects are visible, including bushes, a water fountain, a covered gazebo, and a bench. The park is located in a valley.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/2347444.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: the shorts are white in color.</td>
+        <td>[0.3, 0.64, 0.47, 0.82]</td>
+        <td>[0.2, 0.69, 0.43, 0.77]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000030387.jpg" style="max-width: 336px;"></td>
+        <td>Please provide the bounding box coordinate of the region this sentence describes: the dark skinned man with apron.</td>
+        <td>[0.42, 0.26, 0.85, 0.81]</td>
+        <td>[0.38, 0.27, 0.97, 0.81]</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000334400.jpg" style="max-width: 336px;"></td>
+        <td>Can you elaborate on the elements of the picture provided?</td>
+        <td>This image features a street outside a shopping mall, with multiple traffic signs and store signs. The main focus is the red stop sign, which catches attention. In the background, several buildings and a parked white car can be seen. A potted plant is placed around each stop sign. 
+
+There are also a few people present, with three standing close to each other and another towards the right side of the scene. Some of the individuals are holding handbags and backpacks, indicating they might be shopper or carrying belongings from the mall. A photocopy machine is positioned near the shopping mall, potentially for visitors' use. Lastly, a motorcycle can be spotted on the right side of the scene.</td>
+        <td>The image captures a bustling street scene with numerous visitors and vehicles. There are several people in the area, with some standing and others walking around. A person in a green t-shirt is sitting on a bench near a step.
+
+Various modes of transportation are visible, including a bus and multiple cars. The bus is on the left side of the scene, while three cars can be seen, with one on the left edge of the image, another in the middle, and the third on the right side.
+
+There are a couple of umbrellas in the scene, one near the center and another on the right side. A number of buildings are visible in the background, adding context to the bustling urban atmosphere.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000414706.jpg" style="max-width: 336px;"></td>
+        <td>How many people are there in this crowded ski area?</td>
+        <td>While I cannot give an exact number, the image shows a large group of people gathered at the ski area. The photo shows a snowy ski slope with many skiers preparing to ski, some of whom are on skis and a few on snowboards. This indicates a popular and busy skiing environment.</td>
+        <td>There are two people in this crowded ski area.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000555038.jpg" style="max-width: 336px;"></td>
+        <td>What should the mother watch out for while the children play in this setting?</td>
+        <td>While the two children are playing with a television remote and watching cartoons, the mother should watch out for potential risks and ensure their safety. This includes making sure that the kids do not accidentally harm themselves or others if they are jumping on the bed or moving around in the limited space, especially when there are objects like the chair and the bottle present in the area. She should also be aware of the presence of electronic devices, such as the television remote, and monitor how the children handle them to prevent any risk of electrical hazards or damage to the devices. Furthermore, it is important for the mother to make sure that the children do not nurse bottles or drink any substances that are not suitable for them while playing to avoid choking hazards or potential ingestion of harmful substances.</td>
+        <td>While the mother watches her two children play with a toy in the living room, she should be cautious of their surrounding environment and their safety. Some things to watch out for are objects that could fall and cause injuries or cause damage, electrical appliances that could pose a risk of electric shock, and any potential hazards from stepping on the remote controls that are scattered around the room. Additionally, the mother should make sure that they do not accidentally damage the bed or other furniture while playing. To ensure a safe and enjoyable environment, she can help the children organize their play area and make sure that any objects or toys they play with are age-appropriate and safe.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/textvqa/train_images/63254904d9dee2be.jpg" style="max-width: 336px;"></td>
+        <td>Provide a one-sentence caption for the provided image.
+Reference OCR token: MVY</td>
+        <td>Huge propeller on the Yankee aircraft sitting on the tarmac.</td>
+        <td>A ONE WAY OF LOADING AND UNLOADING THE "CVA" BT THE WINDS ONLY.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000082048.jpg" style="max-width: 336px;"></td>
+        <td>Write a detailed description of the given image.</td>
+        <td>Several people are skiing down a large snow-filled slope at a ski resort in backlit conditions that accentuate the atmosphere. The crowd includes a mix of people of various skill levels, with some near the top of the slope and others further down the mountain. 
+
+There are fifteen visible skiers in the scene, wearing their skis and most likely enjoying their time and pushing themselves to navigate the slopes. The skiers vary in distance from each other, carving their way across the seemingly endless slope for a thrilling ride.</td>
+        <td>The image features a snowy slope where several people are skiing and snowboarding. A man is standing on the slope, equipped with skis and ready to start skiing down the hill. In total, there are 14 people in the scene, some walking on the snow-covered terrain while others ski down the slope.
+
+Two other individuals can be seen in the foreground, standing and enjoying the view or preparing to begin their descent down the mountain. Additionally, there are two snowboards placed in the scene, further adding variety to the winter sports activities occurring on the slope.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000107438.jpg" style="max-width: 336px;"></td>
+        <td>What considerations should be taken into account for the urban planning of this area?</td>
+        <td>When planning for this area, several considerations should be taken into account. First, given the presence of the bicycle leaning on the street sign and buildings, it might indicate that there is a need for designated bike racks in order to encourage cycling as a mode of transportation and ensure motorists' visibility. Second, the traffic light is important for controlling the flow of traffic on this cliffside road. The planning should ensure that the traffic signal is in good working condition to ensure the safety of both pedestrians and vehicles, especially considering the curvy and downward nature of the road. Lastly, it should be prioritized to preserve and improve upon the scenic beauty of the area, including the cliffs, the sea, and the rocks. Efforts should be made to minimize pollution and maintain the natural environment while accommodating the needs of the visitors, such as cycling enthusiasts and tourists appreciating the picturesque views.</td>
+        <td>For the urban planning of an area in a coastal flood zone, there are several issues to consider. Firstly, the city must ensure the safety and resilience of the infrastructure. This includes measures such as elevated roads, pumps to control flooding, and flood-resistant buildings.
+
+Secondly, the city should adopt proper coastal defense mechanisms, such as the construction of dikes, barriers, or retaining walls to minimize the impact of storm surges and sea-level rise.
+
+Moreover, attention must be paid to current and future residents and visitors, providing access to necessary services, like proper waste management and cybersecurity, along with ensuring sustainable development.
+
+Finally, urban planning should also take into account the natural environment and preservation of green spaces or conservation areas, such as the grass-covered field with the bicycle and backpack in the image. This not only maintains the ecological balance but also provides green recreational spaces for both the residents and visitors.
+
+By considering all these aspects, an urban plan for a coastal flood zone can be developed that provides safety, sustainability, and a high quality of life for the city's inhabitants and visitors.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/vg/VG_100K/1592222.jpg" style="max-width: 336px;"></td>
+        <td>Please provide a short description for this region: [0.0, 0.63, 0.16, 0.72].</td>
+        <td>A light tan throw pillow.</td>
+        <td>Back of a beige couch pillow.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000083627.jpg" style="max-width: 336px;"></td>
+        <td>What precautions should be taken when cutting the sandwich, and what is the result of the cutting?</td>
+        <td>While cutting the sandwich, the person should take appropriate precautions to avoid injury and ensure evenly sliced pieces. In the image, a knife is being used to cut through the sandwich, so it is important to cut on a stable surface, hold the sandwich firmly, and use the appropriate pressure for smooth slicing. Since the person is cutting the sandwich in half, they should make sure to cut through the filling and desired layers consistently to maintain its shape and presentation. The result of cutting the sandwich will be two equal halves, which can be further sliced or chopped as needed, depending on the preferences of the consumers or any specific purpose in mind, such as sharing among multiple people or for individual meals.</td>
+        <td>When cutting the sandwich, one should exercise care to avoid anticipation. The person, likely a woman, should ensure that they keep a steady hand while cutting with the knife on the sandwich placed on wax paper or directly on the table to prevent the layers of the sandwich from sliding apart. By making a straight cut from one end to another, the sandwich will be easily divided into two halves without displacing its contents. The result is two equal portions of the stuffed sandwich that would be enjoyed with mouths or served to other people to eat subsequently.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000469363.jpg" style="max-width: 336px;"></td>
+        <td>How many rackets are there?
+Answer the question using a single word or phrase.</td>
+        <td>2</td>
+        <td>5</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000441598.jpg" style="max-width: 336px;"></td>
+        <td>What is the person in the image doing?</td>
+        <td>The person in the image is a skateboarder performing a trick on a brick ramp wall.</td>
+        <td>The person in the image is riding a skateboard and grinding on a ledge or performing a trick near it.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/coco/train2017/000000147501.jpg" style="max-width: 336px;"></td>
+        <td>What are the main features of the refrigerator in the image?</td>
+        <td>The main features of the refrigerator in the image are that it is large, white, and has a freezer drawer. The refrigerator is large enough to fit through the kitchen's narrow doorway.</td>
+        <td>The main features of the refrigerator in the image include its white color and the fact that the freezer is on top of the fridge, with the refrigerator section located below the counter.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/textvqa/train_images/64e93848f792b48e.jpg" style="max-width: 336px;"></td>
+        <td>Provide a one-sentence caption for the provided image.
+Reference OCR token: Cafe, Espolon, sesoria</td>
+        <td>A cafe named Espolion that an old brick building with al fresco dining.</td>
+        <td>The Cafe Espression has outdoor patio furniture set up in front of its doorway.</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/178217267X.jpg" style="max-width: 336px;"></td>
+        <td>Who wrote this book?
+Answer the question using a single word or phrase.</td>
+        <td>Mariusz Sandub</td>
+        <td>Fred Reakos</td>
+    </tr>
+    
+    <tr>
+        <td><img src="data/ocr_vqa/images/1614035644.jpg" style="max-width: 336px;"></td>
+        <td>Who is the author of this book?
+Answer the question using a single word or phrase.</td>
+        <td>PSAT Exam Secrets Test Prep Team</td>
+        <td>NMS HSPT Exam Secrets Test Prep Team</td>
+    </tr>
+    
+    </table>
+</body>
+</html>
